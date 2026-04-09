@@ -19,6 +19,10 @@ const bodyFont = DM_Sans({
 export const metadata: Metadata = {
   title: "Ronan SAT | Break Your Score Ceiling",
   description: "The most intuitive, beautifully designed SAT study suite on the internet.",
+  icons: {
+    icon: [{ url: "/icon.png", type: "image/png" }],
+    apple: [{ url: "/apple-icon.png", type: "image/png" }],
+  },
 };
 
 export default function RootLayout({

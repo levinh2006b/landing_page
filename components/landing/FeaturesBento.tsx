@@ -1,7 +1,15 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Clock, Target, BarChart3, Zap } from "lucide-react";
+import BrandLogo from "@/components/BrandLogo";
+import { Clock, Target, BarChart3, type LucideIcon } from "lucide-react";
+
+type AdditionalFeature = {
+  title: string;
+  description: string;
+  icon?: LucideIcon;
+  useBrandLogo?: boolean;
+};
 
 const features = [
   {
@@ -22,14 +30,14 @@ const features = [
   },
 ];
 
-const additionalFeatures = [
+const additionalFeatures: AdditionalFeature[] = [
   {
     icon: BarChart3,
     title: "Advanced Analytics",
     description: "Track your progress with detailed performance breakdowns by topic, difficulty, and question type.",
   },
   {
-    icon: Zap,
+    useBrandLogo: true,
     title: "Adaptive Learning",
     description: "Our system learns your patterns and recommends exactly what you need to practice next.",
   },
@@ -109,7 +117,17 @@ export default function FeaturesBento() {
               className="flex items-start gap-4 bg-slate-50 rounded-xl p-6"
             >
               <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-white border border-border flex items-center justify-center">
-                <feature.icon className="w-6 h-6 text-blue-600" />
+                {feature.useBrandLogo ? (
+                  <BrandLogo
+                    withWordmark={false}
+                    size={24}
+                    iconClassName="w-6 h-6"
+                  />
+                ) : (() => {
+                    const Icon = feature.icon;
+
+                    return Icon ? <Icon className="w-6 h-6 text-blue-600" /> : null;
+                  })()}
               </div>
               <div>
                 <h4 className="font-semibold text-foreground mb-1">{feature.title}</h4>

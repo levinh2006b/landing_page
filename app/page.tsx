@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import BrandLogo from "@/components/BrandLogo";
 import { 
   ArrowRight, 
   Brain, 
@@ -11,7 +12,6 @@ import {
   Sparkles, 
   Clock, 
   BookOpen,
-  Zap,
   CheckCircle2
 } from "lucide-react";
 
@@ -23,12 +23,12 @@ const NavBar = () => {
       className="fixed top-0 left-0 right-0 z-50 p-4 pointer-events-none"
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center bg-[#f4efe6]/90 backdrop-blur-md border-2 border-[#0f0e0e] rounded-2xl px-6 py-4 brutal-shadow-sm pointer-events-auto">
-        <div className="flex items-center gap-2">
-          <div className="w-8 h-8 bg-[#D9FF42] rounded-full border-2 border-[#0f0e0e] flex items-center justify-center">
-            <Zap className="w-4 h-4 text-[#0f0e0e] fill-current" />
-          </div>
-          <span className="font-display font-bold text-xl tracking-tight uppercase">Ronan SAT</span>
-        </div>
+        <BrandLogo
+          priority
+          size={32}
+          labelClassName="text-xl"
+          iconClassName="w-8 h-8"
+        />
         <div className="hidden md:flex gap-6 font-medium text-sm">
           <Link href="#features" className="hover:underline decoration-2 underline-offset-4">Features</Link>
           <Link href="#vocab" className="hover:underline decoration-2 underline-offset-4">Vocab Builder</Link>
@@ -330,7 +330,11 @@ const CTASection = () => {
             <div className="absolute inset-0 bg-[#0f0e0e] rounded-2xl translate-x-2 translate-y-2 transition-transform group-hover:translate-x-3 group-hover:translate-y-3"></div>
             <div className="relative flex items-center justify-center gap-2 bg-[#D9FF42] border-4 border-[#0f0e0e] px-10 py-6 rounded-2xl text-2xl font-bold font-display uppercase tracking-wide transition-transform group-hover:-translate-y-1 group-hover:-translate-x-1">
               Start Your Free Trial
-              <Zap className="w-8 h-8 group-hover:rotate-12 transition-transform" />
+              <BrandLogo
+                withWordmark={false}
+                size={32}
+                iconClassName="w-8 h-8 group-hover:rotate-12 transition-transform"
+              />
             </div>
           </Link>
         </div>
@@ -344,12 +348,12 @@ const Footer = () => {
     <footer className="bg-[#0f0e0e] text-[#f4efe6] pt-24 pb-12 px-6 border-t-8 border-[#D9FF42]">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12 border-b border-white/20 pb-12">
         <div className="max-w-sm">
-          <div className="flex items-center gap-2 mb-6">
-            <div className="w-10 h-10 bg-[#D9FF42] rounded-full flex items-center justify-center">
-              <Zap className="w-5 h-5 text-[#0f0e0e] fill-current" />
-            </div>
-            <span className="font-display font-bold text-3xl tracking-tight uppercase">Ronan SAT</span>
-          </div>
+          <BrandLogo
+            size={40}
+            labelClassName="text-3xl"
+            iconClassName="w-10 h-10"
+            className="mb-6"
+          />
           <p className="text-gray-400 font-medium text-lg">
             Score growth, but fun. The SAT study suite for the next generation.
           </p>
