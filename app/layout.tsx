@@ -1,23 +1,24 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Calistoga, Work_Sans } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const displayFont = Calistoga({
+  variable: "--font-display",
   subsets: ["latin"],
+  weight: "400",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const bodyFont = Work_Sans({
+  variable: "--font-body",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "Ronan SAT - Master the SAT with Personalized, Data-Driven Practice",
+  title: "Ronan SAT | Playful SAT Prep With Serious Results",
   description:
-    "Experience real test conditions, target your exact weaknesses, and achieve your dream score with our comprehensive SAT preparation platform. Full-length exams, sectional practice, and detailed explanations.",
+    "Ronan SAT blends realistic test simulations, smart review, dashboards, leaderboards, and vocabulary training into a polished study suite built to make SAT prep feel intuitive.",
 };
 
 export default function RootLayout({
@@ -27,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${displayFont.variable} ${bodyFont.variable} antialiased`}>
         {children}
         <Analytics />
       </body>
