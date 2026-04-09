@@ -162,10 +162,10 @@ const BentoFeatures = () => {
         </h2>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[300px]">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:auto-rows-[300px]">
         <motion.div 
           whileHover={{ y: -5 }}
-          className="md:col-span-2 bg-[#FF6B35] rounded-3xl border-4 border-[#0f0e0e] brutal-shadow p-8 flex flex-col justify-between overflow-hidden relative group"
+          className="md:col-span-2 bg-[#FF6B35] rounded-3xl border-4 border-[#0f0e0e] brutal-shadow p-8 flex flex-col justify-between overflow-hidden relative group min-h-[300px]"
         >
           <div className="relative z-10">
             <div className="bg-white border-2 border-[#0f0e0e] p-3 rounded-full inline-flex brutal-shadow-sm mb-6">
@@ -181,7 +181,7 @@ const BentoFeatures = () => {
 
         <motion.div 
           whileHover={{ y: -5 }}
-          className="bg-white rounded-3xl border-4 border-[#0f0e0e] brutal-shadow p-8 flex flex-col justify-between"
+          className="bg-white rounded-3xl border-4 border-[#0f0e0e] brutal-shadow p-8 flex flex-col justify-between min-h-[300px]"
         >
           <div>
              <div className="bg-[#4287FF] border-2 border-[#0f0e0e] p-3 rounded-full inline-flex brutal-shadow-sm mb-6">
@@ -193,15 +193,15 @@ const BentoFeatures = () => {
             </p>
           </div>
           <div className="mt-6 flex items-end gap-2 h-20">
-            <div className="w-1/3 bg-[#f4efe6] h-[40%] rounded-t-xl border-x-2 border-t-2 border-[#0f0e0e]"></div>
-            <div className="w-1/3 bg-[#FF82A9] h-[80%] rounded-t-xl border-x-2 border-t-2 border-[#0f0e0e]"></div>
-            <div className="w-1/3 bg-[#D9FF42] h-[100%] rounded-t-xl border-x-2 border-t-2 border-[#0f0e0e]"></div>
+            <div className="w-1/3 bg-[#f4efe6] h-[40%] rounded-xl border-2 border-[#0f0e0e]"></div>
+            <div className="w-1/3 bg-[#FF82A9] h-[80%] rounded-xl border-2 border-[#0f0e0e]"></div>
+            <div className="w-1/3 bg-[#D9FF42] h-[100%] rounded-xl border-2 border-[#0f0e0e]"></div>
           </div>
         </motion.div>
 
         <motion.div 
           whileHover={{ y: -5 }}
-          className="bg-[#D9FF42] rounded-3xl border-4 border-[#0f0e0e] brutal-shadow p-8 flex flex-col justify-between"
+          className="bg-[#D9FF42] rounded-3xl border-4 border-[#0f0e0e] brutal-shadow p-8 flex flex-col justify-between min-h-[300px]"
         >
           <div>
             <div className="bg-white border-2 border-[#0f0e0e] p-3 rounded-full inline-flex brutal-shadow-sm mb-6">
@@ -216,7 +216,7 @@ const BentoFeatures = () => {
 
         <motion.div 
           whileHover={{ y: -5 }}
-          className="md:col-span-2 bg-[#0f0e0e] rounded-3xl border-4 border-[#0f0e0e] brutal-shadow p-8 flex flex-col md:flex-row justify-between items-center text-[#f4efe6] overflow-hidden relative"
+          className="md:col-span-2 bg-[#0f0e0e] rounded-3xl border-4 border-[#0f0e0e] brutal-shadow p-8 flex flex-col md:flex-row justify-between items-center text-[#f4efe6] overflow-hidden relative min-h-[300px]"
         >
            <div className="relative z-10 md:w-1/2">
             <div className="bg-[#FF82A9] border-2 border-[#FF82A9] p-3 rounded-full inline-flex mb-6">
@@ -384,7 +384,7 @@ const Footer = () => {
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#f4efe6] selection:bg-[#D9FF42] selection:text-[#0f0e0e]">
+    <div className="min-h-screen bg-[#f4efe6] selection:bg-[#D9FF42] selection:text-[#0f0e0e] overflow-x-hidden">
       <NavBar />
       <main>
         <HeroSection />
