@@ -20,7 +20,7 @@ project_details.md
 # production
 /build
 
-*.md
+# *.md
 # misc
 .DS_Store
 *.pem
