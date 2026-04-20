@@ -373,6 +373,13 @@ const Footer = () => {
               <li><Link href="#" className="hover:text-[#FF82A9] transition-colors">Support</Link></li>
             </ul>
           </div>
+          <div>
+            <h4 className="font-bold uppercase tracking-wider text-gray-500 mb-4">Company</h4>
+            <ul className="space-y-3 font-medium text-lg">
+              <li><Link href="/privacy" className="hover:text-[#D9FF42] transition-colors">Privacy</Link></li>
+              <li><Link href="/terms" className="hover:text-[#D9FF42] transition-colors">Terms</Link></li>
+            </ul>
+          </div>
         </div>
       </div>
       <div className="max-w-7xl mx-auto mt-12 flex flex-col md:flex-row justify-between items-center gap-6 font-medium text-gray-500">
