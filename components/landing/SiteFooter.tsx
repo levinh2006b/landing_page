@@ -35,6 +35,7 @@ export default function SiteFooter() {
             <h4 className="font-bold uppercase tracking-wider text-gray-500 mb-4">Product</h4>
             <ul className="space-y-3 font-medium text-lg">
               <li><Link href="/#features" className="hover:text-[#BCCE75] transition-colors">Features</Link></li>
+              <li><Link href="/pricing" className="hover:text-[#BCCE75] transition-colors">Pricing</Link></li>
               <li><Link href="/#community" className="hover:text-[#BCCE75] transition-colors">Community</Link></li>
               <li><Link href="/#vocab" className="hover:text-[#BCCE75] transition-colors">Vocab Builder</Link></li>
             </ul>

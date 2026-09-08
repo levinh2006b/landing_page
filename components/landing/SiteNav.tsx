@@ -119,6 +119,13 @@ const MobileMenu = ({ onClose }: { onClose: () => void }) => {
           </Link>
         ))}
         <Link
+          href="/pricing"
+          onClick={onClose}
+          className="block px-5 py-4 font-bold text-sm hover:bg-[#BCCE75] transition-colors border-b-2 border-[#0f0e0e]"
+        >
+          Pricing
+        </Link>
+        <Link
           href="/referral"
           onClick={onClose}
           className="block px-5 py-4 font-bold text-sm hover:bg-[#BCCE75] transition-colors border-b-2 border-[#0f0e0e]"
@@ -194,6 +201,12 @@ export default function SiteNav({ withBanner = false }: { withBanner?: boolean }
             HOF
           </Link>
           <ClassesDropdown />
+          <Link
+            href="/pricing"
+            className="hover:underline decoration-2 underline-offset-4"
+          >
+            Pricing
+          </Link>
           <Link
             href="/referral"
             className="hover:underline decoration-2 underline-offset-4"

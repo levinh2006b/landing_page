@@ -7,6 +7,7 @@ import BrandLogo from "@/components/BrandLogo";
 import SiteNav from "@/components/landing/SiteNav";
 import SiteFooter from "@/components/landing/SiteFooter";
 import ReferralBanner from "@/components/landing/ReferralBanner";
+import PricingSection from "@/components/landing/PricingSection";
 import { StarIcon } from "@/components/landing/icons";
 import {
   ArrowRight,
@@ -414,7 +415,7 @@ const CTASection = () => {
             Ready to <br/><span className="text-[#BCCE75] text-outline" style={{ WebkitTextStroke: "2px #0f0e0e" }}>Destroy</span> the SAT?
           </h2>
           <p className="text-xl md:text-2xl font-medium text-[#0f0e0e]/80 mb-12 max-w-2xl mx-auto">
-            Join thousands of students who traded boring textbooks for a study platform they actually want to use.
+            Join 300+ students who traded boring textbooks for a study platform they actually want to use.
           </p>
           <Link href="https://learn.ronansat.com/auth" className="group relative inline-block">
             <div className="absolute inset-0 bg-[#0f0e0e] rounded-2xl translate-x-2 translate-y-2 transition-transform group-hover:translate-x-3 group-hover:translate-y-3"></div>
@@ -444,6 +445,7 @@ export default function Home() {
         <BentoFeatures />
         <CommunitySection />
         <FlashcardDemo />
+        <PricingSection />
         <ClassesTeaser />
         <CTASection />
       </main>
